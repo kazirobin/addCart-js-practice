@@ -12,7 +12,7 @@ let speed = 10; // Default speed (lower = faster fall)
  */
 function getRandomChar() {
     // const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const letters = ";'\[]/.,";
+    const letters = `:"|{}<>?`;
     return letters[Math.floor(Math.random() * letters.length)];
 }
 

@@ -88,7 +88,7 @@ function updateCart() {
   // Add event listeners to "Remove" buttons
   document.querySelectorAll(".remove_btn").forEach((button) => {
     button.addEventListener("click", function () {
-      const cartIndex = parseInt(this.getAttribute("data-id"));
+      const cartIndex = this.getAttribute("data-id");
       removeFromCart(cartIndex);
     });
   });
@@ -146,12 +146,15 @@ function applyDiscount() {
 }
 
 // Apply discount on button click
-document
-  .getElementById("apply_discount")
-  .addEventListener("click", applyDiscount);
+document.getElementById("apply_discount").addEventListener("click", applyDiscount);
 
 // Load data on page start
 document.addEventListener("DOMContentLoaded", () => {
   fetchData();
   loadCartFromLocalStorage();
 });
+
+
+
+
+ 
